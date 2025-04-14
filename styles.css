@@ -39,7 +39,22 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
+.skip-link {
+  background: var(--blue-bulletin);
+  color: var(--news-flash);
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  margin-top: -20px;
+}
 
+.skip-link:focus {
+  transform: translateY(0%);
+  margin-top: 0;
+}
 /* ///ADD/// Navigation Styles */
 
 /* ///ADD/// Global Layout Styles */
