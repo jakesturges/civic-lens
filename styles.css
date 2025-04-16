@@ -310,6 +310,45 @@ legend {
   font-weight: 300;
   margin: 0;
 }
+
+#formBtn {
+  background-color: var(--blue-bulletin);
+  padding: 15px 20px;
+  color: var(--watchdog-white);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+footer {
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  padding: 30px 20px;
+}
+
+footer ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 10px;
+  row-gap: 1rem;
+  column-gap: none;
+  margin-bottom: 30px;
+}
+
+footer ul li button {
+  text-decoration: none;
+  color: var(--watchdog-white);
+  background-color: var(--news-flash);
+  padding: 10px;
+  font-style: var(--font-heading);
+  text-transform: uppercase;
+  border: none;
+}
+
+footer p {
+  text-align: center;
+}
+
 /* ///ADD/// Global Text Styles */
 h1 {
   font-size: 2.2rem;
