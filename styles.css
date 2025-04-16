@@ -107,9 +107,9 @@ body.dark-mode {
 .menu {
   display: flex;
   flex-direction: column;
-  gap: rem;
+  gap: .5rem;
   align-items: center;
-  margin: .3rem 0 1rem 0;
+  margin: 1rem 0;
 }
 
 .menu li {
@@ -122,7 +122,7 @@ body.dark-mode {
   color: inherit;
   border: 1px solid var(--news-flash);
   background-color: var(--news-flash);
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   padding: 10px 20px;
   text-align: center;
@@ -130,8 +130,8 @@ body.dark-mode {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  width: 520px;
-  margin-bottom: 2px;
+  width: 470px; /* Set to your desired consistent width */
+  margin: 0 auto;
 }
 
 .menu li a:hover {
@@ -434,6 +434,7 @@ p {
 
   .menu li {
     display: block;
+    margin-right: 10px;
     
   }
 
@@ -443,6 +444,14 @@ p {
     padding: 5px;
     text-transform: uppercase;
     font-size: 1rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--news-flash);
+  /* padding: 10px 200px; */
+    width: 100%;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
   }
 
   #breaking-news {
