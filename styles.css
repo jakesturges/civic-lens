@@ -107,9 +107,9 @@ body.dark-mode {
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: rem;
   align-items: center;
-  margin: 1rem;
+  margin: .3rem 0 1rem 0;
 }
 
 .menu li {
@@ -120,12 +120,35 @@ body.dark-mode {
 .menu li a {
   text-decoration: none;
   color: inherit;
-  font-size: 1.2rem;
+  border: 1px solid var(--news-flash);
+  background-color: var(--news-flash);
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: 520px;
+  margin-bottom: 2px;
 }
 
+.menu li a:hover {
+  background-color: var(--blue-bulletin);
+  transition: all 0.5s ease;
+}
+
+
 .menu-button {
+  background-color: var(--news-flash);
+  padding: 10px 200px;
+  text-transform: uppercase;
+  margin-top: -5px;
+  display: block;
   text-align: center;
 }
+
 
 /* ///ADD/// Global Layout Styles */
 body {
@@ -146,14 +169,6 @@ header {
 
 #heading-text p {
   font-weight: 400;
-}
-
-.menu-button {
-  background-color: var(--news-flash);
-  padding: 10px 200px;
-  text-transform: uppercase;
-  margin-top: -5px;
-  display: block;
 }
 
 #hero {
@@ -193,6 +208,11 @@ blockquote {
   color: var(--watchdog-white);
   border: 1px solid black;
   box-shadow: var(--shadow);
+}
+
+.news:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease-in-out;
 }
 
 .news h3 {
@@ -235,6 +255,11 @@ video {
   padding: 15px;
   margin-bottom: 10px;
   box-shadow: var(--shadow);
+}
+
+.article-card:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease-in-out;
 }
 
 .article-card h3 {
@@ -293,6 +318,7 @@ label {
 
 fieldset input[type="checkbox"] {
   column-span: 1 / 2;
+  accent-color: var(--blue-bulletin);
 }
 
 legend {
@@ -327,6 +353,12 @@ legend {
   font-size: 1rem;
 }
 
+#formBtn:hover {
+  background-color: var(--watchdog-white);
+  color: var(--story-subtitle);
+  transition: all 0.3s ease;
+}
+
 footer {
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
@@ -351,7 +383,12 @@ footer ul li a {
   font-family: var(--font-body);
   font-style: var(--font-heading);
   text-transform: uppercase;
-  border: none;
+  border: 1px solid var(--news-flash);
+}
+
+footer ul li a:hover {
+  background-color: var(--blue-bulletin);
+  transition: all 0.5s ease;
 }
 
 footer p {
@@ -397,6 +434,7 @@ p {
 
   .menu li {
     display: block;
+    
   }
 
   .menu li a {
@@ -432,7 +470,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .3fr 1fr .3fr;
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
 
   fieldset {
@@ -445,12 +483,38 @@ p {
     grid-column: 1 / -1;
   }
 
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer ul {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  footer ul li {
+    margin-right: 10px;
+  }
 }
 
 /* ///ADD/// large styles 920px */
+@media screen and (min-width: 920px) {
+  #articles-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
+  fieldset {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* ///ADD/// x-large styles 1024px */
+@media screen and (min-width: 1024px) {
+  #articles-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
