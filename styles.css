@@ -527,7 +527,25 @@ p {
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: dark) {
+  body.dark-mode {
+    background-color: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
 
+@media (perfers-color-scheme: light) {
+  body.light-mode {
+    background-color: var(--watchdog-white);
+    color: var(--truth-text);
+  }
+}
+
+@media (prefers-reduced-motion) { 
+  * {
+    transition-duration: 0s;
+  }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(input:checked))) {
