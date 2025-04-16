@@ -37,8 +37,8 @@
       <label for="menu-toggle" class="menu-button">Menu</label>
       <ul class="menu">
         <li><a href="#breaking-news">Breaking News</a></li>
-        <li><a href="#featured-aticles">Featured Articles</a></li>
-        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#articles">Featured Articles</a></li>
+        <li><a href="#subscription">Alerts</a></li>
         <li><a href="#social">Social</a></li>
       </ul>
     </nav>
@@ -120,10 +120,14 @@
     <h2>Stay Informed. Stay Empowered.</h2>
     <p>Receive text messages with the news you want to know.</p>
     <form action="https://wp.zybooks.com/form-viewer.php" method="post">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name">
-      <label for="phone">Mobile</label>
-      <input type="tel" name="phone" id="phone">
+      <div id="name-input-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div id="phone-input-group">
+        <label for="phone">Mobile</label>
+        <input type="tel" name="phone" id="phone">
+      </div>
       <fieldset>
         <legend>Notification Preferences</legend>
       
@@ -166,14 +170,14 @@
     </form>
   </section>
 </main>
-<footer>
+<footer id="social">
   <h2>Follow Us</h2>
   <ul>
-    <li><button>Twitter/X</button></li>
-    <li><button>Instagram</button></li>
-    <li><button>YouTube</button></li>
-    <li><button>TikTok</button></li>
-    <li><button>LinkedIn</button></li>
+    <li><a>Twitter/X</a></li>
+    <li><a>Instagram</a></li>
+    <li><a>YouTube</a></li>
+    <li><a>TikTok</a></li>
+    <li><a>LinkedIn</a></li>
   </ul>
   <p>&copy; 2025 Civic Lens. All rights reserved.</p>
 </footer>
